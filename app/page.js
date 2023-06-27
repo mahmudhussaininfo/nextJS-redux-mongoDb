@@ -1,3 +1,9 @@
+import Counter from "./counter/page";
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Counter />
+    </>
+  );
 }
