@@ -1,29 +1,16 @@
 import mongoose from "mongoose";
 
-//create Schema
-const userSchema = mongoose.Schema(
+const todoSchema = mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
       trim: true,
     },
-    email: {
+    priority: {
       type: String,
       required: true,
       trim: true,
-    },
-    photo: {
-      type: String,
-      default: null,
-    },
-    cell: {
-      type: String,
-      trim: true,
-    },
-    gender: {
-      type: String,
-      enum: ["Male", "Female"],
     },
     status: {
       type: Boolean,
@@ -39,5 +26,4 @@ const userSchema = mongoose.Schema(
   }
 );
 
-//export
-export default mongoose.models.User || mongoose.model("User", userSchema);
+export default mongoose.models.Todo || mongoose.model("Todo", todoSchema);
